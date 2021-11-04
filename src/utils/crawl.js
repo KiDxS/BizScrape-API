@@ -9,11 +9,18 @@ exports.businessmirror = async () => {
     const url = "https://businessmirror.com.ph/category/business/";
     let html_response = await axios.get(url);
     let html = html_response.data;
+
+    // loads the html to cheerio
     let $ = cheerio.load(html);
+    // scrapes for any h2 tags that has a tag children
     let article = $("h2").find("a");
+
     article.each((index, element) => {
+      // takes the text or string
       let title = $(element).text();
+      // takes the url link
       let url = $(element).attr("href");
+      // pushes them to the results array as objects
       results.push({
         title: title,
         url: url,
