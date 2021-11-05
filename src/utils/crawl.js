@@ -61,6 +61,4 @@ exports.manilaTimes = async () => {
 };
 
 */
-exports.results = async () => {
-  return results;
-};
+exports.results = results;
