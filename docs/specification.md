@@ -25,5 +25,5 @@ An API that allows you to fetch business news coming from multiple sources that 
     which is an array of objects
 2. The endpoints must follow the following structure:
     ```
-    https://example.com/{api_version}/resource/verb
+    https://example.com/{api_version}/resource
     ```
