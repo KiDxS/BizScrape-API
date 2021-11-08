@@ -1,20 +1,10 @@
 const crawler = require("../utils/crawl");
 
-const crawlAllSources = async () => {
-  try {
-    await crawler.businessmirror();
-    await crawler.manilabulletin();
-  } catch (err) {
-    console.error(err);
-  }
-};
-
-const main = async (req, res) => {
+const main = async (req, res, next) => {
   try {
     const source = req.query.source;
     if (source === undefined) {
-      const results = crawler.results;
-      await crawlAllSources();
+      const results = await crawler.results;
       return res.status(200).json(results);
     } else {
       console.log(source);
