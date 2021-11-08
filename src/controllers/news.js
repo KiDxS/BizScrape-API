@@ -3,6 +3,7 @@ const crawler = require("../utils/crawl");
 const crawlAllSources = async () => {
   try {
     await crawler.businessmirror();
+    await crawler.manilabulletin();
   } catch (err) {
     console.error(err);
   }
