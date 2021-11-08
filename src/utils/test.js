@@ -1,10 +1,10 @@
-const crawl = require("./crawl");
+const crawler = require("./crawl");
 
 async function main() {
-    await crawler.businessmirror();
-    await crawler.manilabulletin();
-    let results = crawl.results;
-    console.log(results);
-
+  await crawler.businessmirror();
+  await crawler.manilabulletin();
+  let results = crawler.results;
+  console.log(results);
 }
+
 main();
