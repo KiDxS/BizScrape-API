@@ -2,10 +2,14 @@ const crawler = require("../utils/crawl");
 
 const main = async (req, res, next) => {
     try {
-        const source = req.query.source;
+        const { source } = req.query;
         const results = await crawler.results;
         if (source === undefined) {
-            return res.status(200).json(results);
+            return res.status(200).json({
+                success: true,
+                message: "The data has been pulled",
+                data: results,
+            });
         } else {
             const filteredResults = [];
             for (const index in results) {
@@ -16,7 +20,11 @@ const main = async (req, res, next) => {
                     filteredResults.push(element);
                 }
             }
-            return res.status(200).json(filteredResults);
+            return res.status(200).json({
+                success: true,
+                message: "The data has been pulled",
+                data: filteredResults,
+            });
         }
     } catch (err) {
         console.log(err);
