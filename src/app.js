@@ -3,12 +3,12 @@ const PORT = 8080 || process.env.PORT;
 const app = express();
 require("dotenv").config();
 const API_VERSION = process.env.API_VERSION;
-const crawlerControlMiddleware = require("./middleware/crawlerControl");
+const crawlerControlUtil = require("./utils/crawlerControl");
 
 const newsRoute = require("./routes/news");
 
 // Executes the crawler every 2 minutes
-crawlerControlMiddleware();
+crawlerControlUtil();
 
 app.use(`/${API_VERSION}/news`, newsRoute);
 
