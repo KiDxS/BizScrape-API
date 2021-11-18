@@ -1,16 +1,28 @@
-const main = async (req, res, next) => {
-    const { source } = req.query;
-    const sources = ["manilabulletin", "businessmirror"];
-    for (const index in sources) {
-        const element = sources[index];
-        if (source !== element) {
-            return res.status(400).json({
-                success: false,
-                message: "Source specified in the query doesn't exist.",
-                data: {},
-            });
-        }
-    }
+const { param, validationResult } = require("express-validator");
+
+const validateSource = () => {
+    // The list of sources
+    const sources = ["manilabulletin", "businessmirror"]
+    return [
+        param("source").isIn(sources).withMessage({
+            success: false,
+            message: "The value of the source parameter doesn't exist in the list of sources.",
+            data: {},
+        }),
+    ];
 };
 
-module.exports = main;
+const validate = (req, res, next) => {
+    const errors = validationResult(req);
+    if (errors.isEmpty()) {
+        return next();
+    }
+    const extractedErrors = [];
+    errors.array().map((err) => extractedErrors.push({ [err.param]: err.msg }));
+    return res.status(400).json(extractedErrors);
+};
+
+module.exports = {
+    validateSource,
+    validate,
+};
