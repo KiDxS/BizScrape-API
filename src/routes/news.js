@@ -3,8 +3,8 @@ const Router = express.Router();
 const newsController = require("../controllers/news");
 const { validate, validateSource } = require("../middleware/validator");
 
-Router.get("/", validateSource(), validate, newsController);
+Router.get("/", newsController);
 
-Router.get("/:source", newsController);
+Router.get("/:source", validateSource(), validate, newsController);
 
 module.exports = Router;
