@@ -1,8 +1,8 @@
 ---
 name: Suggestion
 about: Create a suggestion to improve the code.
-title: ''
-labels: ''
+title: "[Suggestion]"
+labels: suggestion
 assignees: ''
 
 ---
