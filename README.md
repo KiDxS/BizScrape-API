@@ -8,7 +8,12 @@
   An API to fetch business news from multiple sources in the Philippines. 
 </h4>
 <div align="center">
-  <img src="https://img.shields.io/badge/chat-on%20facebook-orange">
+  <a href="https://web.facebook.com/KidZenChan/">
+    <img src="https://img.shields.io/badge/chat-on%20facebook-orange">
+  </a>
+  <a href="">
+    <img src="https://img.shields.io/badge/send-suggestions-green">
+  </a>
 </div>
 <p align="center">
   <a href="#how-to-use">How to use</a> |
