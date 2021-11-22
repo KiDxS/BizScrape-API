@@ -11,21 +11,26 @@
   <a href="https://web.facebook.com/KidZenChan/">
     <img src="https://img.shields.io/badge/chat-on%20facebook-orange">
   </a>
-  <a href="">
+  <a href="https://github.com/KiDxS/BizNews-API/issues/new?assignees=&labels=suggestion&template=suggestion.md&title=%5BSuggestion%5D">
     <img src="https://img.shields.io/badge/send-suggestions-green">
   </a>
 </div>
 <p align="center">
-  <a href="#how-to-use">How to use</a> |
+  <a href="#how-to-setup-for-ourselves">How to setup for ourselves</a> |
   <a href="#key-features">Key Features</a>
-  
 </p>
+<img align="center" src="https://raw.githubusercontent.com/KiDxS/BizNews-API/dev/docs/img/BizNews-API.gif?token=AKL2UL5Z27Z54SXBNAVR6UTBUQSTQ">
 
 ## Key Features
 - Updates data for every 12 hours.
+- Filteration for which source you want to receive data.
 - Retrieves news from multiple sources.
+  - [x] [manilabulletin](https://mb.com.ph/category/business/business-news)
+  - [x] [businessmirror](https://businessmirror.com.ph/category/business/)
+  - [ ] [inquirer](https://business.inquirer.net/category/latest-stories)
+  - [ ] [manilatimes](https://www.manilatimes.net/business)
 
-## How to use
+## How to setup for ourselves
 ```
 # Clone the repo
 git clone https://github.com/KiDxS/BizNews-API
