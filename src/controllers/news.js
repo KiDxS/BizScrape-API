@@ -15,7 +15,7 @@ const main = async (req, res, next) => {
             }
             return res.status(200).json({
                 success: true,
-                message: "The results are retrieved.",
+                message: "The results have been retrieved.",
                 data: filteredResults,
             });
         }
@@ -23,7 +23,7 @@ const main = async (req, res, next) => {
         else {
             return res.status(200).json({
                 success: true,
-                message: "The results are retrieved.",
+                message: "The results have been retrieved.",
                 data: results,
             });
         }
