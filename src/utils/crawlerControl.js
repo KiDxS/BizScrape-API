@@ -6,10 +6,10 @@ const minutes = 120000;
 const main = async () => {
     setInterval(async () => {
         try {
-            const results = await crawler.results;
+            const results = crawler.results;
             // Resets the array
             results.length = 0;
-            console.log("running setInterval");
+            console.log("running the crawler");
             await crawler.businessmirror();
             await crawler.manilabulletin();
         } catch (err) {
