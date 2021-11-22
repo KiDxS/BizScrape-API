@@ -20,15 +20,15 @@ const main = async (req, res, next) => {
             }
             return res.status(200).json({
                 success: true,
-                message: "The data has been pulled",
+                message: "The results are retrieved.",
                 data: filteredResults,
             });
-        } 
+        }
         // If source is undefined or null
         else {
             return res.status(200).json({
                 success: true,
-                message: "The data has been pulled",
+                message: "The results are retrieved.",
                 data: results,
             });
         }

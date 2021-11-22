@@ -18,11 +18,10 @@ crawlerControlUtil();
 
 app.use(`/${API_VERSION}/news`, newsRoute);
 
-
 app.get("/", (req, res) => {
-  res.send("hello");
+    res.send("hello");
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
