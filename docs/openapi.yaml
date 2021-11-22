@@ -61,7 +61,7 @@ paths:
                 type: object
               example:
                 success: true
-                message: The results had been retrieved.
+                message: The results have been retrieved.
                 data:
                   - title: Ayala brings anti-COVID drug Molnupiravir to PH
                     url: >-
@@ -157,7 +157,7 @@ paths:
                 type: object
               example:
                 success: true
-                message: The results had been retrieved.
+                message: The results have been retrieved.
                 data:
                   - title: >-
                       Net Asset Value Per Share (NAVPS) Performance (as of
