@@ -12,15 +12,14 @@ app.use(cors());
 
 // Route
 const newsRoute = require("./routes/news");
+const swaggerRoute = require("./routes/swagger-doc");
 
 // Executes the crawler every 2 minutes
 crawlerControlUtil();
 
 app.use(`/${API_VERSION}/news`, newsRoute);
 
-app.get("/", (req, res) => {
-    res.send("hello");
-});
+app.use("/", swaggerRoute);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
