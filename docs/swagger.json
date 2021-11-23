@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "BizNews API",
-    "description": "An API that pulls business-related news from all kinds of different sources that are based in the Philippines.",
+    "description": "An API to fetch business news from multiple sources in the Philippines",
     "version": "1.0.0"
   },
   "servers": [
