@@ -1,0 +1,261 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "BizNews API",
+    "description": "An API that pulls business-related news from all kinds of different sources that are based in the Philippines.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://biznews-api.herokuapp.com"
+    }
+  ],
+  "paths": {
+    "/v1/news/{source}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "source",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The source you want to filter"
+          }
+        ],
+        "tags": [
+          "General"
+        ],
+        "summary": "/v1/news/:source",
+        "description": "An endpoint that allows you to specify which singular source would you pull from.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string",
+                  "example": "Express"
+                }
+              },
+              "Content-Type": {
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer",
+                  "example": "3117"
+                }
+              },
+              "ETag": {
+                "schema": {
+                  "type": "string",
+                  "example": "W/\"c2d-zYm7nlDzsjjMzwmbZz4r+qI+PoY\""
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Thu, 18 Nov 2021 07:48:36 GMT"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "Keep-Alive": {
+                "schema": {
+                  "type": "string",
+                  "example": "timeout=5"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "example": {
+                  "success": true,
+                  "message": "The results are retrieved.",
+                  "data": [
+                    {
+                      "title": "Ayala brings anti-COVID drug Molnupiravir to PH",
+                      "url": "https://mb.com.ph/2021/11/18/ayala-brings-anti-covid-drug-molnupiravir-to-ph/",
+                      "source": "manilabulletin"
+                    },
+                    {
+                      "title": "MGB pushes for gradual stop of exportation of raw minerals",
+                      "url": "https://mb.com.ph/2021/11/18/mgb-pushes-for-gradual-stop-of-exportation-of-raw-minerals/",
+                      "source": "manilabulletin"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "headers": {
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string",
+                  "example": "Express"
+                }
+              },
+              "Content-Type": {
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer",
+                  "example": "124"
+                }
+              },
+              "ETag": {
+                "schema": {
+                  "type": "string",
+                  "example": "W/\"7c-9esZEOO4nOkQQDNiD84skZG2KRo\""
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Thu, 18 Nov 2021 08:18:41 GMT"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "Keep-Alive": {
+                "schema": {
+                  "type": "string",
+                  "example": "timeout=5"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "example": [
+                  {
+                    "source": {
+                      "success": false,
+                      "message": "The value of the source parameter doesn't exist in the list of sources.",
+                      "data": {}
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/news": {
+      "get": {
+        "tags": [
+          "General"
+        ],
+        "summary": "/v1/news",
+        "description": "An endpoint that allows you to pull news from all of the sources.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string",
+                  "example": "Express"
+                }
+              },
+              "Content-Type": {
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "integer",
+                  "example": "22183"
+                }
+              },
+              "ETag": {
+                "schema": {
+                  "type": "string",
+                  "example": "W/\"56a7-0Jx1VVTHEpb6wB2KiIrVFuBn1LM\""
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Thu, 18 Nov 2021 07:51:17 GMT"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "Keep-Alive": {
+                "schema": {
+                  "type": "string",
+                  "example": "timeout=5"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "example": {
+                  "success": true,
+                  "message": "The results are retrieved.",
+                  "data": [
+                    {
+                      "title": "Net Asset Value Per Share (NAVPS) Performance (as of November 17, 2021)",
+                      "url": "https://businessmirror.com.ph/2021/11/17/net-asset-value-per-share-navps-performance-as-of-november-17-2021/",
+                      "source": "businessmirror"
+                    },
+                    {
+                      "title": "Vista Land 9-month income expands by 9%",
+                      "url": "https://businessmirror.com.ph/2021/11/17/vista-land-9-month-income-expands-by-9/",
+                      "source": "businessmirror"
+                    },
+                    {
+                      "title": "Top banking regulator urges  climate rules for lenders",
+                      "url": "https://mb.com.ph/2021/11/17/top-banking-regulator-urges-climate-rules-for-lenders/",
+                      "source": "manilabulletin"
+                    },
+                    {
+                      "title": "Alert Level 1 by New Year likely—DOF",
+                      "url": "https://mb.com.ph/2021/11/17/alert-level-1-by-new-year-likely-dof/",
+                      "source": "manilabulletin"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
