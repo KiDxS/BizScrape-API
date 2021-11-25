@@ -1,7 +1,7 @@
 const crawler = require("./crawl");
 
-// Milliseconds of 12 hours
-const milliseconds = 1000 * 60 * 60;
+// Milliseconds of 25 minutes
+const milliseconds = 1500000;
 
 const main = async () => {
     setInterval(async () => {
