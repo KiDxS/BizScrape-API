@@ -38,8 +38,8 @@
 # Clone the repo
 git clone https://github.com/KiDxS/BizScrape-API
 
-# Install docker & docker-compose
-apt install docker docker-compose | pacman -S docker docker-compose
+# Edit as you like and copy the .env_sample as .env
+cp .env_sample .env
 
 # Build the image and run a container
 docker-compose up
