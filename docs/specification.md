@@ -1,4 +1,4 @@
-# BizNews-API
+# BizScrape-API
 An API that allows you to fetch business news coming from multiple sources that are in the Philippines.
 
 ## Features

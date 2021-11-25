@@ -1,13 +1,13 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "BizNews API",
+    "title": "BizScrape API",
     "description": "An API to fetch business news from multiple sources in the Philippines",
     "version": "1.0.0"
   },
   "servers": [
     {
-      "url": "https://biznews-api.herokuapp.com"
+      "url": "https://bizscrape-api.herokuapp.com"
     }
   ],
   "paths": {
