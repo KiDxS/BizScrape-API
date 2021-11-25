@@ -14,7 +14,7 @@ app.use(cors());
 const newsRoute = require("./routes/news");
 const swaggerRoute = require("./routes/swagger-doc");
 
-// Executes the crawler every 12 hours
+// Executes the crawler every 25 minutes
 crawlerControlUtil();
 
 app.use(`/${API_VERSION}/news`, newsRoute);
