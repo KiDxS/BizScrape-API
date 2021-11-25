@@ -22,7 +22,7 @@
   <a href="#how-to-setup-for-ourselves">How to setup for ourselves</a> |
   <a href="#key-features">Key Features</a>
 </p>
-<img align="center" src="https://raw.githubusercontent.com/KiDxS/BizScrape-API/master/docs/img/BizNews-API.gif">
+<img align="center" src="https://raw.githubusercontent.com/KiDxS/BizScrape-API/master/docs/img/BizScrape-API.gif">
 
 ## Key Features
 - Updates data for every 12 hours.
