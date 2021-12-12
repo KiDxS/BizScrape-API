@@ -1,0 +1,4 @@
+- [ ] https://business.inquirer.net/category/latest-stories
+- [x] https://mb.com.ph/category/business/business-news
+- [x] https://businessmirror.com.ph/category/business/
+- [ ] https://www.manilatimes.net/business
