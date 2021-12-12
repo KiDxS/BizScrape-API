@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://raw.githubusercontent.com/KiDxS/BizScrape-API/dev/docs/img/logo.png" height="200" width="200">
+  <img src="https://raw.githubusercontent.com/KiDxS/BizScrape-API/master/docs/img/logo.png" height="200" width="200">
   <br>
   BizScrape API
 </h1>
