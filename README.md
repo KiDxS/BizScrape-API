@@ -39,7 +39,7 @@
 git clone https://github.com/KiDxS/BizScrape-API
 
 # Copy the .env_sample to .env
-// To change the time when it will fetch data, change the value of the MILLISECONDS variable to the corresponding millisecond value.
+// To change the time when it will fetch data, change the value of the MILLISECONDS variable to the corresponding millisecond value. (Default: 25 mins)
 
 
 # Build the image and run a container
