@@ -25,9 +25,9 @@
 <img align="center" src="https://raw.githubusercontent.com/KiDxS/BizScrape-API/master/docs/img/BizScrape-API.gif">
 
 ## Key Features
-- Updates data for every 12 hours.
+- Updates data for every 25 minutes.
 - Filteration for which source you want to receive data.
-- Retrieves news from multiple sources.
+- Retrieves business news from multiple sources.
   - [x] [manilabulletin](https://mb.com.ph/category/business/business-news)
   - [x] [businessmirror](https://businessmirror.com.ph/category/business/)
   - [ ] [inquirer](https://business.inquirer.net/category/latest-stories)
@@ -38,7 +38,9 @@
 # Clone the repo
 git clone https://github.com/KiDxS/BizScrape-API
 
-# Edit the .env if you want to change the time when to fetch results from the sources (Default: every 25 mins)
+# Copy the .env_sample to .env
+// To change the time when it will fetch data, change the value of the MILLISECONDS variable to the corresponding millisecond value.
+
 
 # Build the image and run a container
 docker-compose up
